@@ -49,6 +49,9 @@ El pipeline sigue una arquitectura basada en datos con las siguientes etapas:
 - Procesamiento distribuido para manejar grandes volúmenes de datos.
 - Implementación de automatización para minimizar la intervención manual.
 
+![image](https://github.com/user-attachments/assets/441a20b5-f42e-487c-bdf9-742fa9010ddf)
+![image](https://github.com/user-attachments/assets/27c7010c-c91e-48c4-bb92-b9b59c56493c)
+
 ---
 
 ## **3. Descripción del ambiente de desarrollo**
