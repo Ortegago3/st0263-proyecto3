@@ -23,15 +23,25 @@ El objetivo del proyecto es diseñar e implementar un pipeline de datos para cap
 5. Exposición de resultados mediante una API basada en Lambda y API Gateway.
 
 ### **1.1. Aspectos cumplidos de la actividad**
-- Captura de datos desde fuentes reales (API pública y MySQL).
-- Procesamiento y transformación de datos con Apache Spark en un clúster EMR.
-- Almacenamiento de datos procesados en Amazon S3.
-- Consulta de datos refinados con Amazon Athena.
-- Exposición de resultados mediante una API Gateway integrada con AWS Lambda.
-- Documentación detallada y estructura del proyecto en GitHub.
+1. **Captura de datos desde una API pública:**
+   - Se implementó y ejecutó exitosamente el script `captura_datos_api.py`, que descarga datos desde la API de COVID-19 y los almacena en la carpeta `raw/` del bucket S3.
+2. **Simulación de datos adicionales:**
+   - Se creó y cargó un dataset simulado (`mysql_patient_data.csv`) a la carpeta `raw/` del bucket S3 utilizando el script `ingestion_mysql.py`.
+3. **Configuración de Amazon S3:**
+   - Se organizaron las carpetas `raw/`, `trusted/` y `refined/` en el bucket S3.
+   - Los datos capturados se almacenaron correctamente en la estructura del bucket.
+4. **Entorno configurado para Spark:**
+   - Se configuraron Spark y las dependencias necesarias para el procesamiento distribuido de datos.
 
 ### **1.2. Aspectos no cumplidos**
-- *Todos los aspectos del proyecto fueron desarrollados según lo requerido*.
+1. **Procesamiento de datos con `etl_spark.py`:**
+   - No fue posible ejecutar correctamente el script de ETL debido a problemas con la configuración del conector de Hadoop para S3 (`UnsupportedFileSystemException: No FileSystem for scheme "s3"`). Esto impidió mover los datos de la carpeta `raw/` a `trusted/`.
+2. **Análisis de datos con `analysis_spark.py`:**
+   - Debido a que el procesamiento ETL no se completó, no se pudieron realizar los análisis definidos en el script.
+3. **Consulta automatizada con `lambda_athena_query.py`:**
+   - El script no se ejecutó porque los datos analizados no estaban disponibles en la carpeta `refined/`.
+4. **Integración completa con AWS Athena:**
+   - No se logró configurar correctamente AWS Athena para consultar los datos procesados debido a la falta de datos en las etapas previas.
  
 ---
 
