@@ -32,7 +32,7 @@ El objetivo del proyecto es diseñar e implementar un pipeline de datos para cap
 
 ### **1.2. Aspectos no cumplidos**
 - *Todos los aspectos del proyecto fueron desarrollados según lo requerido*.
-
+ 
 ---
 
 ## **2. Información general de diseño de alto nivel**
