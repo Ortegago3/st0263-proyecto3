@@ -1,0 +1,6 @@
+case_id,department,municipality,cases,recovered,deaths
+1,BOGOTA,BOGOTA,100,Recuperado,1
+2,VALLE,BUGA,50,Recuperado,0
+3,ANTIOQUIA,MEDELLIN,30,Recuperado,1
+4,ANTIOQUIA,MEDELLIN,25,Recuperado,0
+5,ANTIOQUIA,MEDELLIN,10,Recuperado,0
